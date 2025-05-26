@@ -33,13 +33,12 @@ Scanning Local Network for Open Ports
 The objective of this task was to perform network enumeration on a local machine using Nmap, one of the most widely used network scanning tools. The scan was aimed at identifying open ports and detecting the services running on those ports.
 
 Steps Followed
-1)	Identified My Local IP Address
+ 1)	Identified My Local IP Address
 Before running the scan, I needed to know the IP address of a machine in my local network. To find my own local IP, I used:
            ifconfig
 This showed me my network interface details. I noted down the IP in the same subnet to target during the scan.
- 
 
-2)	Performed Nmap Stealth & Version Scan
+ 2)	Performed Nmap Stealth & Version Scan
 I used the following command to run a stealth scan (-sS) and gather service version information (-sV), and saved the output to a file using -oN:
 nmap -sS -sV 192.168.27.183/24 -oN nmap_scan_result.txt
 
@@ -48,7 +47,7 @@ Explanation of the command:
 •	-sV: Enables version detection to identify which services and versions are running on open ports.
 •	-oN: Saves the output of the scan into a text file called nmap_scan_result.txt for documentation and further analysis.
 
-3)	Step 3: Output and Results
+ 3)	Step 3: Output and Results
 After running the above command, Nmap scanned the target system and produced a list of open ports, along with the services running on those ports and their version information.
 The results were saved in a file:
 nmap_scan_result.txt
@@ -59,9 +58,7 @@ PORT         STATE      SERVICE                  VERSION
 8443/tcp   open      ssl/https-alt?
 9000/tcp   open      ssl/cslistener?
 53/tcp       open      domain                   dnsmasq 2.51
- 
 
- 
 
 Common services running on those ports and Potential security risks from open ports.
 
